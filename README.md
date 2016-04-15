@@ -1,0 +1,2 @@
+# Ching
+Typecho Themes
