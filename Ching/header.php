@@ -37,7 +37,7 @@
                 <?php if (!empty($this->options->topbarBlock) && in_array('ShowAdmin', $this->options->topbarBlock)): ?>
                     <?php if($this->user->hasLogin()): ?>
                     <a class="f_r" href="<?php $this->options->adminUrl(); ?>"><?php _e('进入后台'); ?> (<?php $this->user->screenName(); ?>)</a>
-                    <a class="f_r" href="<?php $this->options->logoutUrl(); ?>"><?php _e('安全退出'); ?></a></li>
+                    <a class="f_r" href="<?php $this->options->logoutUrl(); ?>"><?php _e('安全退出 &nbsp;&nbsp;'); ?></a></li>
                     <?php else: ?>
                     <a class="f_r" href="<?php $this->options->adminUrl('login.php'); ?>"><?php _e('安全登录'); ?></a>
                     <?php endif; ?>
