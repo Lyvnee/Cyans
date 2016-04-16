@@ -31,8 +31,8 @@
         <ul class="widget-list">
         <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
         <?php while($comments->next()): ?>
-            <li><a href="<?php $comments->permalink(); ?>"><?php $comments->author(false); ?></a>: <?php $comments->excerpt(35, '...'); ?></li>
-        <?php endwhile; ?>
+            <li><?php $comments->author(false); ?>: <a href="<?php $comments->permalink(); ?>"><?php $comments->excerpt(35, '...'); ?></li>
+        <?php endwhile; ?></a>
         </ul>
     </div>
     <?php endif; ?>
@@ -44,7 +44,7 @@
         <?php $this->widget('Widget_Metas_Category_List')
                 ->parse('<li><a href="{permalink}">{name}</a> ({count})</li>'); ?>
       </ul>
-	</div>
+      </div>
     <?php endif; ?>
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)): ?>
