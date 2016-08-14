@@ -11,8 +11,8 @@ function themeConfig($form) {
     $weiboUrl = new Typecho_Widget_Helper_Form_Element_Text('weiboUrl', NULL, 'http://weibo.com/', _t('新浪微博'), _t('在这里填入一个新浪微博地址'));
     $form->addInput($weiboUrl);
 
-    $qqUrl = new Typecho_Widget_Helper_Form_Element_Text('qqUrl', NULL, 'http://t.qq.com/', _t('腾讯微博'), _t('在这里填入一个腾讯微博地址'));
-    $form->addInput($qqUrl);
+    $gitUrl = new Typecho_Widget_Helper_Form_Element_Text('gitUrl', NULL, 'http://github.com/', _t('GitHub'), _t('在这里填入一个GitHub地址'));
+    $form->addInput($gitUrl);
 
     $topAd = new Typecho_Widget_Helper_Form_Element_Text('topAd', NULL, '欢迎光临我的博客！', _t('顶栏公告'), _t('在这里填入一段文字，作为欢迎语或者公告显示在顶栏'));
     $form->addInput($topAd);

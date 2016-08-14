@@ -7,8 +7,8 @@
                 <?php if ($this->options->weiboUrl): ?>
                 <li><a rel="nofollow" class="xlwb" href="<?php $this->options->weiboUrl(); ?>" target="_blank"><?php _e('新浪微博'); ?></a></li>
                 <?php endif; ?>
-                <?php if ($this->options->qqUrl): ?>
-                <li><a rel="nofollow" class="txwb" href="<?php $this->options->qqUrl(); ?>" target="_blank"><?php _e('腾讯微博'); ?></a></li>
+                <?php if ($this->options->gitUrl): ?>
+                <li><a rel="nofollow" class="txwb" href="<?php $this->options->gitUrl(); ?>" target="_blank"><?php _e('GitHub'); ?></a></li>
                 <?php endif; ?>
                 <li><a class="rss" href="<?php $this->options->feedUrl(); ?>" target="_blank"><?php _e('RSS'); ?></a></li>
                 <li><a rel="nofollow" class="wx" href="mailto:<?php $this->author->mail(); ?>"><?php _e('邮箱'); ?></a></li>
@@ -31,8 +31,8 @@
         <ul class="widget-list">
         <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
         <?php while($comments->next()): ?>
-            <li><?php $comments->author(false); ?>: <a href="<?php $comments->permalink(); ?>"><?php $comments->excerpt(35, '...'); ?></li>
-        <?php endwhile; ?></a>
+            <li><?php $comments->author(false); ?>: <a href="<?php $comments->permalink(); ?>"><?php $comments->excerpt(35, '...'); ?></a></li>
+        <?php endwhile; ?>
         </ul>
     </div>
     <?php endif; ?>
@@ -44,7 +44,7 @@
         <?php $this->widget('Widget_Metas_Category_List')
                 ->parse('<li><a href="{permalink}">{name}</a> ({count})</li>'); ?>
       </ul>
-      </div>
+	</div>
     <?php endif; ?>
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)): ?>

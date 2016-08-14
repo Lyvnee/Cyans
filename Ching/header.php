@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="j64C2hLK8T">
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
@@ -18,7 +19,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
-     
+    <?php if ($this->options->tongjiCode): ?><?php $this->options->tongjiCode(); ?><?php endif; ?>
 </head>
 <body>
 <!--[if lt IE 8]>
