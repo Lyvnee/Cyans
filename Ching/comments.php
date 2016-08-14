@@ -4,7 +4,7 @@
 	<div class="ds-thread" data-thread-key="<?php echo $this->cid;?>" 
 	data-title="<?php echo $this->title;?>" data-author-key="<?php echo $this->authorId;?>" data-url=""></div>
 	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"lyvnee",theme:"<?php echo ($this->options->Duoshuo_theme) ? $this->options->Duoshuo_theme : 'default'?>"};
+	var duoshuoQuery = {short_name:"Your ID",theme:"<?php echo ($this->options->Duoshuo_theme) ? $this->options->Duoshuo_theme : 'default'?>"};
 	(function() {
 		var ds = document.createElement("script");
 		ds.type = "text/javascript";ds.async = true;
