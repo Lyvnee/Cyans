@@ -3,7 +3,7 @@ body{font-family:"微软雅黑","Source Han Sans",Tahoma,Verdana,Geneva,"Droid S
 a{color:#666;text-decoration:none}
 a:hover,a:active{color:#db6d4c}
 h1,h2,h3,h4,h5,h6{font-family:"微软雅黑","Source Han Sans",Tahoma,Verdana,Geneva,"Droid Serif",Georgia,"Times New Roman",STHeiti,serif}
-img{border:none;}
+img{border:none;max-width: 670px; overflow: hidden; }
 pre,code{color: #5E570E;background: #f7f7f7;font-size: 12px;font-family: Menlo,Monaco,Consolas,"Lucida Console","Courier New",monospace;}
 code{padding: 4px;color: #b94a48}
 pre{overflow:auto;padding:5px;margin: 10px 0;border-radius: 5px;}
