@@ -14,6 +14,10 @@ Ching 是一款简洁的响应式Typecho主题。
 - 下载此分支文件重命名为`Ching`，上传至站点`/usr/themes/`，启用主题，在`设置外观`中做相关设置
 - 按照`plugins`分支中的说明，自行安装相关插件
 
+### 许可
+
+MIT License
+
 [1]: http://ysido.com/
 [2]: http://www.imhan.com
 
