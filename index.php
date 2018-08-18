@@ -1,10 +1,10 @@
 <?php
 /**
- * 一款简洁的Typecho模板
+ * 一款简洁自适应布局的Typecho模板
  * 
- * @package Ching 
+ * @package Ching Theme
  * @author Lyvnee
- * @version 0.9.1
+ * @version 0.9.2
  * @license MIT
  * @link http://lyvnee.com
  **/
@@ -35,7 +35,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 			<ul class="post-meta">
 				<li><span class="time"><?php $this->date('Y-m-j'); ?></span></li>
 				<li><span class="fl"><?php $this->category(','); ?></span></li>
-				<span class="pl f_r"><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('木有评论', '%d 条评论'); ?></a></span>
+				<span class="pl f_r"><a href="<?php $this->permalink(); ?>#disqus_thread"  data-disqus-identifier="<?php $this->cid(); ?>"></a></span>
 			</ul>
             <div class="post-content">
 				<p><?php $this->excerpt(250, '...'); ?></p>

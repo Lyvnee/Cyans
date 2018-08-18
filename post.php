@@ -7,7 +7,7 @@
             <ul class="post-meta">
                 <li><span class="time"><?php $this->date('Y-m-j'); ?></span></li>
                 <li><span class="fl"><?php $this->category(','); ?></span></li>
-                <li><span class="pl"><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('木有评论', '%d 条评论'); ?></a></span></li>
+                <li><span class="disqus-comment-count pl" data-disqus-identifier="<?php $this->cid(); ?>"></span></li>
             </ul>
         <div class="post-content">
             <?php $this->content(); ?>
@@ -24,10 +24,12 @@
             <li><span class="tag"><?php $this->tags(' , ', true, '无标签'); ?></span></li>
         </ul>
     </div>
+    
     <ul class="post-near">
-        <li><?php _e('<em>上一篇</em> : ') ?><?php $this->thePrev('%s','没有了'); ?></li>
-        <li><?php _e('<em>下一篇</em> :' ) ?><?php $this->theNext('%s','没有了'); ?></li>
+        <li class="f_l"><?php _e('<em>上一篇</em> ：') ?><?php $this->thePrev('%s','没有了'); ?></li>
+        <li class="f_r"><?php _e('<em>下一篇</em> ：' ) ?><?php $this->theNext('%s','没有了'); ?></li>
     </ul>
+   
     <?php $this->need('comments.php'); ?>
 
 </div><!-- end #main-->

@@ -14,6 +14,9 @@ function themeConfig($form) {
     $gitUrl = new Typecho_Widget_Helper_Form_Element_Text('gitUrl', NULL, 'http://github.com/', _t('GitHub'), _t('在这里填入一个GitHub地址'));
     $form->addInput($gitUrl);
 
+    $showICP = new Typecho_Widget_Helper_Form_Element_Text('showICP', NULL, NULL, _t('ICP备案号'), _t('在这里填入你的ICP备案号'));
+    $form->addInput($showICP);
+
     $topAd = new Typecho_Widget_Helper_Form_Element_Text('topAd', NULL, '欢迎光临我的博客！', _t('顶栏公告'), _t('在这里填入一段文字，作为欢迎语或者公告显示在顶栏'));
     $form->addInput($topAd);
 

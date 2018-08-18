@@ -31,7 +31,7 @@
         <div class="inner">
                 <?php if (!empty($this->options->topbarBlock) && in_array('ShowTopAd', $this->options->topbarBlock)): ?>
                     <?php if ($this->options->topAd): ?>
-                    <a class="f_l"><?php $this->options->topAd(); ?></a>
+                    <a><?php $this->options->topAd(); ?></a>
                     <?php endif; ?>
                 <?php endif; ?>
 

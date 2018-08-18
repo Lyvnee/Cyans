@@ -31,7 +31,7 @@
         <ul class="widget-list">
         <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
         <?php while($comments->next()): ?>
-            <li><?php $comments->author(false); ?>: <a href="<?php $comments->permalink(); ?>"><?php $comments->excerpt(35, '...'); ?></a></li>
+            <li><b><?php $comments->author(false); ?></b>: <a href="<?php $comments->permalink(); ?>"><?php $comments->excerpt(35, '...'); ?></a></li>
         <?php endwhile; ?>
         </ul>
     </div>
@@ -51,7 +51,7 @@
     <div class="widget">
 		<h3 class="widget-title"><?php _e('按月归档'); ?></h3>
         <ul class="widget-list widget-right">
-            <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=M Y')
+            <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=Y年n月')
             ->parse('<li><a href="{permalink}">{date}</a> ({count})</li>'); ?>
         </ul>
 	</div>
@@ -77,5 +77,8 @@
         </ul>
 	</div>
     <?php endif; ?>
-
+    <div class="widget">
+        <a href="http://www.vultr.com/?ref=7127139" target="_blank">
+        <img src="/usr/themes/Ching/img/vutrl.png" alt="Hosted by Vutrl ." width="160" style="margin-top:40px;margin-left:25px;"></a>
+    </div>
 </div><!-- end #sidebar -->

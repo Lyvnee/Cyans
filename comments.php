@@ -1,20 +1,20 @@
-<div id="comments"> 
-<?php if($this->allow("comment")): ?>
-<!-- Duoshuo Comment BEGIN -->
-	<div class="ds-thread" data-thread-key="<?php echo $this->cid;?>" 
-	data-title="<?php echo $this->title;?>" data-author-key="<?php echo $this->authorId;?>" data-url=""></div>
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"Your ID",theme:"<?php echo ($this->options->Duoshuo_theme) ? $this->options->Duoshuo_theme : 'default'?>"};
-	(function() {
-		var ds = document.createElement("script");
-		ds.type = "text/javascript";ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = "UTF-8";
-		(document.getElementsByTagName("head")[0] 
-		|| document.getElementsByTagName("body")[0]).appendChild(ds);
-	})();
-	</script>
-<!-- Duoshuo Comment END -->
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<div id="comments">
+    <?php if($this->allow('comment')): ?>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = '<?php $this->permalink(); ?>';
+this.page.identifier = '<?php $this->cid(); ?>';
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://lyvnee.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                                
 <?php else: ?>
 <h4><?php _e("抱歉，评论已关闭！"); ?></h4> 
 <?php endif; ?> 

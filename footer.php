@@ -2,30 +2,20 @@
 
     </div>
     <div id="totop" class="totop"></div>
-</div><!-- end #body -->
+</div>
 
 <div id="footer">
     &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-    <?php _e('由 <a href="http://www.typecho.org">Typecho</a> 强力驱动'); ?>. <<?php timer_stop($this); ?>s> 
-</div><!-- end #footer -->
+    <?php _e('由 <a href="http://www.typecho.org">Typecho</a> 强力驱动'); ?>.<?php $this->options->showICP(); ?> <<?php timer_stop($this); ?>s> 
+</div>
 
 <script src="<?php $this->options->themeUrl('js/jquery.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/ching.js'); ?>"></script>
 
 <?php $this->footer(); ?>
+
+<script id="dsq-count-scr" src="//lyvnee.disqus.com/count.js" async></script>
+
 </body>
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+
 </html>

@@ -24,7 +24,7 @@
             <ul class="post-meta">
                 <li><span class="time"><?php $this->date('Y-m-j'); ?></span></li>
                 <li><span class="fl"><?php $this->category(','); ?></span></li>
-                <span class="pl f_r"><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('木有评论', '%d 条评论'); ?></a></span>
+                <span class="pl f_r"><a href="<?php $this->permalink(); ?>#disqus_thread"  data-disqus-identifier="<?php $this->cid(); ?>"></a></span>
             </ul>
             <div class="post-content">
                 <?php $this->excerpt(250, '...'); ?>
