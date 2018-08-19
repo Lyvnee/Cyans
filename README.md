@@ -4,10 +4,13 @@
 
 Ching 是一款简洁的响应式Typecho主题。
 
+![Ching预览图](./screenshot.png)
+
 ### 说明
 
 - 主题默认使用 [Disqus][1] 评论系统，请按下列说明上传并安装。
 - 主题的侧栏友链使用了[Hanny][2]的友链插件(Links)，请按下列说明上传并安装。
+- 主题演示地址：[LYVNEE'S BLOG][3]
 
 ### 安装
 
@@ -33,4 +36,5 @@ MIT License
 
 [1]: https://disqus.com/
 [2]: http://www.imhan.com
+[3]: http://lyvnee.com/
 
