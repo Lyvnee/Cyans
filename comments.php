@@ -7,9 +7,9 @@ var disqus_config = function () {
 this.page.url = '<?php $this->permalink(); ?>';
 this.page.identifier = '<?php $this->cid(); ?>';
 };
-(function() { // DON'T EDIT BELOW THIS LINE
+(function() { // 请修改<YOUR Disqus Website Shortname>，其他地方勿动！
 var d = document, s = d.createElement('script');
-s.src = '你的链接';
+s.src = 'https://<YOUR Disqus Website Shortname>.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();

@@ -14,7 +14,7 @@
 
 <?php $this->footer(); ?>
 
-<script id="dsq-count-scr" src="你的链接" async></script>
+<script id="dsq-count-scr" src="//<YOUR Disqus Website Shortname>.disqus.com/count.js" async></script>
 
 </body>
 
