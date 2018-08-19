@@ -23,9 +23,9 @@ Ching 是一款简洁的响应式Typecho主题。
 
 - 请注册并使用通用代码（Universal Code ）安装 Disqus。
 
-- 请将`comments.php`文件中的`s.src = 'https://<YOUR Disqus Website Shortname>.disqus.com/embed.js' ` 中的<YOUR Disqus Website Shortname>替换为自己的 Disqus Website Shortname，其他地方已设置好**请勿修改**。
+- 请将`comments.php`文件中的`s.src = 'https://<YOUR Disqus Website Shortname>.disqus.com/embed.js' ` 中的`<YOUR Disqus Website Shortname>`替换为自己的 Disqus Website Shortname，其他地方已设置好**请勿修改**。
 
-- 请将`footer.php`文件中的`src="//<YOUR Disqus Website Shortname>.disqus.com/count.js" ` 中的<YOUR Disqus Website Shortname>替换为自己的 Disqus Website Shortname。
+- 请将`footer.php`文件中的`src="//<YOUR Disqus Website Shortname>.disqus.com/count.js" ` 中的`<YOUR Disqus Website Shortname>`替换为自己的 Disqus Website Shortname。
 
 ### 许可
 
