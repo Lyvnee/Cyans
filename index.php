@@ -16,11 +16,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <div class="" id="main" role="main">
     <div class="crumbs_patch">
     	<a href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a> &raquo;</li>
-    	<?php if ($this->is('index')): ?><!-- 页面为首页时 -->
+    	<?php if ($this->is('index')): ?>
     		<?php _e('最新文章'); ?>
-    	<?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
+    	<?php elseif ($this->is('post')): ?>
     		<?php $this->category(); ?> &raquo; <?php $this->title() ?>
-    	<?php else: ?><!-- 页面为其他页时 -->
+    	<?php else: ?>
     		<?php $this->archiveTitle(array(
                 'category'  =>  _t('分类 <i>%s</i> 下的文章'),
                 'search'    =>  _t('包含关键字 <i>%s</i> 的文章'),
@@ -48,7 +48,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 	<?php endwhile; ?>
 
     <?php $this->pageNav('&laquo;', '&raquo;'); ?>
-</div><!-- end #main-->
+</div>
 
 <?php $this->need('sidebar.php'); ?>
 <?php $this->need('footer.php'); ?>

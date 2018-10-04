@@ -1,14 +1,14 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
 
-    <div class="" id="main">
+    <div id="main">
         <div class="crumbs_patch">
             <a href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a> &raquo;</li>
-            <?php if ($this->is('index')): ?><!-- 页面为首页时 -->
+            <?php if ($this->is('index')): ?>
                 <?php _e('最新文章'); ?>
-            <?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
+            <?php elseif ($this->is('post')): ?>
                 <?php $this->category(); ?> &raquo; <?php $this->title() ?>
-            <?php else: ?><!-- 页面为其他页时 -->
+            <?php else: ?>
                 <?php $this->archiveTitle(array(
                     'category'  =>  _t('分类 <i>%s</i> 下的文章'),
                     'search'    =>  _t('包含关键字 <i>%s</i> 的文章'),
@@ -24,7 +24,11 @@
             <ul class="post-meta">
                 <li><span class="time"><?php $this->date('Y-m-j'); ?></span></li>
                 <li><span class="fl"><?php $this->category(','); ?></span></li>
-                <span class="pl f_r"><?php if ($this->options->showDisqus): ?><a href="<?php $this->permalink(); ?>#disqus_thread"  data-disqus-identifier="<?php $this->cid(); ?>"></a><?php else: ?><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('0 条评论', '1 条评论', '%d 条评论'); ?></a><?php endif; ?></span>
+                <span class="pl f_r"><?php if ($this->options->showDisqus): ?>
+                <a href="<?php $this->permalink(); ?>#disqus_thread"  data-disqus-identifier="<?php $this->cid(); ?>"></a>
+                <?php else: ?>
+                <a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('0 条评论', '1 条评论', '%d 条评论'); ?></a>
+                <?php endif; ?></span>
             </ul>
             <div class="post-content">
                 <?php $this->excerpt(250, '...'); ?>
@@ -42,7 +46,7 @@
         <?php endif; ?>
 
         <?php $this->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
-    </div><!-- end #main -->
+    </div>
 
 	<?php $this->need('sidebar.php'); ?>
 	<?php $this->need('footer.php'); ?>

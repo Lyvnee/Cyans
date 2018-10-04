@@ -1,6 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
-<div class="" id="secondary">
+<div id="secondary">
     <div class="widget">
         <div class="fork">
             <ul>
@@ -81,4 +81,4 @@
         <a href="http://www.vultr.com/?ref=7127139" target="_blank">
         <img src="/usr/themes/Ching/img/vutrl.png" alt="Hosted by Vutrl ." width="160" style="margin-top:40px;margin-left:25px;"></a>
     </div>
-</div><!-- end #sidebar -->
+</div>

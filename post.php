@@ -1,13 +1,17 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
 
-<div class="" id="main">
+<div id="main">
         <div class="post">
             <h2 class="post-title"> <?php $this->title() ?> </h2>
             <ul class="post-meta">
                 <li><span class="time"><?php $this->date('Y-m-j'); ?></span></li>
                 <li><span class="fl"><?php $this->category(','); ?></span></li>
-                <li><?php if ($this->options->showDisqus): ?><span class="disqus-comment-count pl" data-disqus-identifier="<?php $this->cid(); ?>"></span><?php else: ?><span class="pl"><?php $this->commentsNum('0 条评论', '1 条评论', '%d 条评论'); ?></span><?php endif; ?></li>
+                <li><?php if ($this->options->showDisqus): ?>
+<span class="disqus-comment-count pl" data-disqus-identifier="<?php $this->cid(); ?>"></span>
+<?php else: ?>
+<span class="pl"><?php $this->commentsNum('0 条评论', '1 条评论', '%d 条评论'); ?></span>
+<?php endif; ?></li>
             </ul>
         <div class="post-content">
             <?php $this->content(); ?>
@@ -32,7 +36,7 @@
    
     <?php $this->need('comments.php'); ?>
 
-</div><!-- end #main-->
+</div>
 
 <?php $this->need('sidebar.php'); ?>
 <?php $this->need('footer.php'); ?>
