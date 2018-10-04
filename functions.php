@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 function themeConfig($form) {
@@ -22,6 +22,15 @@ function themeConfig($form) {
 
     $tongjiCode = new Typecho_Widget_Helper_Form_Element_Textarea('tongjiCode', NULL, NULL, _t('站点统计'), _t('在这里填入站点统计代码，例如百度统计。'));
     $form->addInput($tongjiCode);
+
+    $showDisqus = new Typecho_Widget_Helper_Form_Element_Radio('showDisqus',
+    array('0' => _t('使用原生评论系统'),
+          '1' => _t('使用Disqus评论系统')),
+          '1', _t('评论系统选择'), _t('默认使用Disqus评论系统,请在下面设置你的Disqus Website Shortname。'));
+    $form->addInput($showDisqus);
+
+    $shortName = new Typecho_Widget_Helper_Form_Element_Text('shortName', NULL, NULL, _t('Disqus评论系统设置'), _t('在这里填入你的Disqus Website Shortname，例如myblog。'));
+    $form->addInput($shortName);
 
     $topbarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('topbarBlock', 
     array('ShowAdmin' => _t('显示登录入口'),

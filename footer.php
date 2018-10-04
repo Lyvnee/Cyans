@@ -5,8 +5,7 @@
 </div>
 
 <div id="footer">
-    &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-    <?php _e('由 <a href="http://www.typecho.org">Typecho</a> 强力驱动'); ?>.<?php $this->options->showICP(); ?> <<?php timer_stop($this); ?>s> 
+    &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>&nbsp;|&nbsp;<?php _e('由 <a href="http://www.typecho.org">Typecho</a> 强力驱动'); ?>&nbsp;|&nbsp;<?php $this->options->showICP(); ?>&nbsp;<<?php timer_stop($this); ?>s> 
 </div>
 
 <script src="<?php $this->options->themeUrl('js/jquery.min.js'); ?>"></script>
@@ -14,8 +13,13 @@
 
 <?php $this->footer(); ?>
 
-<script id="dsq-count-scr" src="//<YOUR Disqus Website Shortname>.disqus.com/count.js" async></script>
+<?php if ($this->options->showDisqus): ?>
+<?php if ($this->options->shortName): ?>
+    <script id="dsq-count-scr" src="//<?php $this->options->shortName() ?>.disqus.com/count.js" async></script>
+<?php else: ?>
+    <?php _e('<!-- 你的Disqus Website Shortname没有设置，请在后台设置。 -->') ?>
+<?php endif; ?>
+<?php endif; ?>
 
 </body>
-
 </html>
