@@ -8,10 +8,10 @@
                 <li><span class="time"><?php $this->date('Y-m-j'); ?></span></li>
                 <li><span class="fl"><?php $this->category(','); ?></span></li>
                 <li><?php if ($this->options->showDisqus): ?>
-<span class="disqus-comment-count pl" data-disqus-identifier="<?php $this->cid(); ?>"></span>
-<?php else: ?>
-<span class="pl"><?php $this->commentsNum('0 条评论', '1 条评论', '%d 条评论'); ?></span>
-<?php endif; ?></li>
+                    <span class="disqus-comment-count pl" data-disqus-identifier="<?php $this->cid(); ?>"></span>
+                    <?php else: ?>
+                    <span class="pl"><?php $this->commentsNum('0 条评论', '1 条评论', '%d 条评论'); ?></span>
+                    <?php endif; ?></li>
             </ul>
         <div class="post-content">
             <?php $this->content(); ?>

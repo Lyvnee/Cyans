@@ -46,7 +46,6 @@ function themeConfig($form) {
         'ShowTagCloud' => _t('显示标签云'),
         'ShowLinks' => _t('显示友情链接')),
     array('ShowRecentPosts', 'ShowRecentComments', 'ShowCategory', 'ShowArchive', 'ShowTagCloud', 'ShowLinks'), _t('侧边栏显示'));
-    
     $form->addInput($sidebarBlock->multiMode());
 }
 

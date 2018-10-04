@@ -2,27 +2,27 @@
 <?php if ($this->options->showDisqus): ?>
 <div id="comments">
     <?php if($this->allow('comment')): ?>
-<div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-this.page.url = '<?php $this->permalink(); ?>';
-this.page.identifier = '<?php $this->cid(); ?>';
-};
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-<?php if ($this->options->shortName): ?>
-s.src = 'https://<?php $this->options->shortName() ?>.disqus.com/embed.js';
-<?php else: ?>
-    <?php _e('<!-- 你的Disqus Website Shortname没有设置，请在后台设置。 -->') ?>
-<?php endif; ?>
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                                
-<?php else: ?>
-<h4><?php _e("抱歉，评论已关闭！"); ?></h4> 
-<?php endif; ?> 
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+        this.page.url = '<?php $this->permalink(); ?>';
+        this.page.identifier = '<?php $this->cid(); ?>';
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        <?php if ($this->options->shortName): ?>
+        s.src = 'https://<?php $this->options->shortName() ?>.disqus.com/embed.js';
+        <?php else: ?>
+            <?php _e('<!-- 你的Disqus Website Shortname没有设置，请在后台设置。 -->') ?>
+        <?php endif; ?>
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>请启用 JavaScript 以便查看评论。</a></noscript>                                
+    <?php else: ?>
+        <h4><?php _e("抱歉，评论已关闭！"); ?></h4> 
+    <?php endif; ?> 
 </div>
 <?php else: ?>
 <div id="comments">
@@ -31,7 +31,6 @@ s.setAttribute('data-timestamp', +new Date());
 	<h3><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h3>
     
     <?php $comments->listComments(); ?>
-
     <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
     
     <?php endif; ?>
@@ -70,7 +69,7 @@ s.setAttribute('data-timestamp', +new Date());
     	</form>
     </div>
     <?php else: ?>
-    <h4><?php _e("抱歉，评论已关闭！"); ?></h4> 
+        <h4><?php _e("抱歉，评论已关闭！"); ?></h4> 
     <?php endif; ?>
 </div>
 <?php endif; ?> 

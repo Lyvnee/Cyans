@@ -14,11 +14,11 @@
 <?php $this->footer(); ?>
 
 <?php if ($this->options->showDisqus): ?>
-<?php if ($this->options->shortName): ?>
-    <script id="dsq-count-scr" src="//<?php $this->options->shortName() ?>.disqus.com/count.js" async></script>
-<?php else: ?>
-    <?php _e('<!-- 你的Disqus Website Shortname没有设置，请在后台设置。 -->') ?>
-<?php endif; ?>
+	<?php if ($this->options->shortName): ?>
+	    <script id="dsq-count-scr" src="//<?php $this->options->shortName() ?>.disqus.com/count.js" async></script>
+	<?php else: ?>
+	    <?php _e('<!-- 你的Disqus Website Shortname没有设置，请在后台设置。 -->') ?>
+	<?php endif; ?>
 <?php endif; ?>
 
 </body>
