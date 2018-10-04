@@ -4,9 +4,9 @@
  * 
  * @package Ching Theme
  * @author Lyvnee
- * @version 0.9.3
+ * @version 0.9.4
  * @license MIT
- * @link http://lyvnee.com
+ * @link https://lyvnee.com
  **/
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
