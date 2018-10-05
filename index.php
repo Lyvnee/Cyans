@@ -35,10 +35,15 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 			<ul class="post-meta">
 				<li><span class="time"><?php $this->date('Y-m-j'); ?></span></li>
 				<li><span class="fl"><?php $this->category(','); ?></span></li>
+				<li><span class="view"><?php $this->views(); ?> 次浏览</span></li>
 				<span class="pl f_r"><?php if ($this->options->showDisqus): ?><a href="<?php $this->permalink(); ?>#disqus_thread"  data-disqus-identifier="<?php $this->cid(); ?>"></a><?php else: ?><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('0 条评论', '1 条评论', '%d 条评论'); ?></a><?php endif; ?></span>
 			</ul>
             <div class="post-content">
-				<p><?php $this->excerpt(250, '...'); ?></p>
+                        <?php if($this->options->isExcerpt): ?>
+                        <?php $this->excerpt($this->options->excerptLength,'...'); ?>
+                        <?php else: ?>
+                        <?php $this->content(); ?>
+                        <?php endif; ?>
             </div>
 			<ul class="post-more">
 				<li><span class="tag"><?php $this->tags(' , ', true, '无标签'); ?></span></li>

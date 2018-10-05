@@ -1,6 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 <div id="secondary">
+    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowSocialLinks', $this->options->sidebarBlock)): ?>
     <div class="widget">
         <div class="fork">
             <ul>
@@ -14,6 +15,7 @@
                 <li><a rel="nofollow" class="wx" href="mailto:<?php $this->author->mail(); ?>"><?php _e('邮箱'); ?></a></li>
             </ul>
         </div>
+    <?php endif; ?>
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
     <div class="widget">

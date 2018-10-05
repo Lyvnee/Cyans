@@ -23,6 +23,15 @@ function themeConfig($form) {
     $tongjiCode = new Typecho_Widget_Helper_Form_Element_Textarea('tongjiCode', NULL, NULL, _t('站点统计'), _t('在这里填入站点统计代码，例如百度统计。'));
     $form->addInput($tongjiCode);
 
+    $isExcerpt = new Typecho_Widget_Helper_Form_Element_Radio('isExcerpt',
+        array('0' => _t('Typecho默认'),
+              '1' => _t('文本截取')),
+              '1', _t('文章列表文章摘要内容'), _t('Typecho 默认方式根据&lt;!--more--&gt;标签截取内容，文本截取则仅截取设定长度的纯文本内容。'));
+    $form->addInput($isExcerpt);
+
+    $excerptLength = new Typecho_Widget_Helper_Form_Element_Text('excerptLength', NULL, '200', _t('文章摘要截取长度'), _t('仅在摘要内容选择文本截取时起作用。'));
+    $form->addInput($excerptLength);
+
     $showDisqus = new Typecho_Widget_Helper_Form_Element_Radio('showDisqus',
     array('0' => _t('使用原生评论系统'),
           '1' => _t('使用Disqus评论系统')),
@@ -39,13 +48,15 @@ function themeConfig($form) {
     $form->addInput($topbarBlock->multiMode());
 
     $sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock', 
-    array('ShowRecentPosts' => _t('显示最新文章'),
+    array('ShowSocialLinks' => _t('显示社交信息'),
+        'ShowRecentPosts' => _t('显示最新文章'),
         'ShowRecentComments' => _t('显示最近回复'),
         'ShowCategory' => _t('显示文章分类'),
         'ShowArchive' => _t('显示按月归档'),
         'ShowTagCloud' => _t('显示标签云'),
         'ShowLinks' => _t('显示友情链接')),
-    array('ShowRecentPosts', 'ShowRecentComments', 'ShowCategory', 'ShowArchive', 'ShowTagCloud', 'ShowLinks'), _t('侧边栏显示'));
+    array('ShowSocialLinks', 'ShowRecentPosts', 'ShowRecentComments', 'ShowCategory', 'ShowArchive', 'ShowTagCloud', 'ShowLinks'), _t('侧边栏显示'));
+    
     $form->addInput($sidebarBlock->multiMode());
 }
 
