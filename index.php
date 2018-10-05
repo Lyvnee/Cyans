@@ -4,7 +4,7 @@
  * 
  * @package Ching Theme
  * @author Lyvnee
- * @version 0.9.5
+ * @version 0.9.6
  * @license MIT
  * @link https://lyvnee.com
  **/
@@ -39,11 +39,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 				<span class="pl f_r"><?php if ($this->options->showDisqus): ?><a href="<?php $this->permalink(); ?>#disqus_thread"  data-disqus-identifier="<?php $this->cid(); ?>"></a><?php else: ?><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('0 条评论', '1 条评论', '%d 条评论'); ?></a><?php endif; ?></span>
 			</ul>
             <div class="post-content">
-                        <?php if($this->options->isExcerpt): ?>
+                    <?php if($this->options->isExcerpt): ?>
                         <?php $this->excerpt($this->options->excerptLength,'...'); ?>
-                        <?php else: ?>
+                    <?php else: ?>
                         <?php $this->content(); ?>
-                        <?php endif; ?>
+                    <?php endif; ?>
             </div>
 			<ul class="post-more">
 				<li><span class="tag"><?php $this->tags(' , ', true, '无标签'); ?></span></li>

@@ -7,7 +7,7 @@
             <ul class="post-meta">
                 <li><span class="time"><?php $this->date('Y-m-j'); ?></span></li>
                 <li><span class="fl"><?php $this->category(','); ?></span></li>
-		<li><span class="view"><?php $this->views(); ?> 次浏览</span></li>
+		        <li><span class="view"><?php $this->views(); ?> 次浏览</span></li>
                 <li><?php if ($this->options->showDisqus): ?>
                     <span class="disqus-comment-count pl" data-disqus-identifier="<?php $this->cid(); ?>"></span>
                     <?php else: ?>
