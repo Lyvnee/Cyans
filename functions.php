@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 function themeConfig($form) {
@@ -79,8 +79,9 @@ function timer_stop( $display = 0, $precision = 3 ) {
     return $r;
 }
 
-
+/*
 function themeFields($layout) {
     $customAbstract = new Typecho_Widget_Helper_Form_Element_Textarea('customAbstract', NULL, NULL, _t('自定义文章摘要'), _t('在这里你可以自定义文章摘要,用来显示在首页。'));
     $layout->addItem($customAbstract);
 }
+*/
