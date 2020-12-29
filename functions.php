@@ -41,7 +41,7 @@ function themeConfig($form) {
     $shortName = new Typecho_Widget_Helper_Form_Element_Text('shortName', NULL, NULL, _t('Disqus评论系统设置'), _t('在这里填入你的Disqus Website Shortname，例如myblog。'));
     $form->addInput($shortName);
     
-    $hidePages = new Typecho_Widget_Helper_Form_Element_Text('hidePages', NULL, NULL, _t('隐藏页面设置'), _t('在这里填入你要隐藏的独立页面的页面缩略名{slug} ，例如about。目前只能填写一个！！！'));
+    $hidePages = new Typecho_Widget_Helper_Form_Element_Text('hidePages', NULL, NULL, _t('隐藏页面设置'), _t('在这里填入你要在导航栏隐藏的独立页面的页面缩略名{slug} ，例如about。目前只能填写一个！！！'));
     $form->addInput($hidePages);
     
     $topbarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('topbarBlock', 
