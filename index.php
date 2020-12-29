@@ -4,7 +4,7 @@
  * 
  * @package Ching Theme
  * @author Lyvnee
- * @version 0.9.6
+ * @version 0.9.7
  * @license MIT
  * @link https://lyvnee.com
  **/
