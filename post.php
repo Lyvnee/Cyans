@@ -2,7 +2,22 @@
 <?php $this->need('header.php'); ?>
 
 <div id="main">
-        <div class="post">
+        <div class="crumbs_patch">
+    	<a href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a> &raquo;</li>
+    	<?php if ($this->is('index')): ?>
+    		<?php _e('最新文章'); ?>
+    	<?php elseif ($this->is('post')): ?>
+    		<?php $this->category(); ?> &raquo; <a href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+    	<?php else: ?>
+    		<?php $this->archiveTitle(array(
+                'category'  =>  _t('分类 <i>%s</i> 下的文章'),
+                'search'    =>  _t('包含关键字 <i>%s</i> 的文章'),
+                'tag'       =>  _t('标签 <i>%s</i> 下的文章'),
+                'author'    =>  _t('<i>%s</i> 发布的文章')
+            ), '',''); ?>
+    	<?php endif; ?>
+        </div>
+	<div class="post">
             <h2 class="post-title"> <?php $this->title() ?> </h2>
             <ul class="post-meta">
                 <li><span class="time"><?php $this->date('Y-m-j'); ?></span></li>
@@ -20,7 +35,7 @@
         <div id="banquan">
                 <div class="xinxi">
                 <span class="zuozhe">本文作者：</span><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a> &nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="biaoti2">文章标题：</span> <a href="<?php $this->title() ?>"><?php $this->title() ?></a><br>
+                <span class="biaoti2">文章标题：</span> <a href="<?php $this->permalink() ?>"><?php $this->title() ?></a><br>
                  <span class="blog_url">本文地址：</span><a href="<?php $this->permalink() ?>" title="<?php $this->title() ?>"><?php $this->permalink() ?></a><br>
                 <b>版权声明：</b>若无特别注明，本文皆为“<a class="blog_name" href="<?php $this->options->siteUrl(); ?>" title="<?php $this->options->description() ?>"><?php $this->options->title() ?></a>”原创，转载请保留文章出处。
                 </div>
