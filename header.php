@@ -6,7 +6,6 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="baidu-site-verification" content="j64C2hLK8T">
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
@@ -28,7 +27,7 @@
         <div class="inner">
                 <?php if (!empty($this->options->topbarBlock) && in_array('ShowTopAd', $this->options->topbarBlock)): ?>
                     <?php if ($this->options->topAd): ?>
-                    <a><?php $this->options->topAd(); ?></a>
+                    <img src="<?php $this->options->themeUrl('img/notice.png'); ?>" alt="公告：" /><a><?php $this->options->topAd(); ?></a>
                     <?php endif; ?>
                 <?php endif; ?>
 
