@@ -2,9 +2,9 @@
 /**
  * 一款简洁自适应布局的Typecho模板
  * 
- * @package Ching Theme
+ * @package Cyans Theme
  * @author Lyvnee
- * @version 0.9.7
+ * @version 0.9.8
  * @license MIT
  * @link https://lyvnee.com
  **/
