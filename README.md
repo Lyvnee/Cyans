@@ -1,10 +1,10 @@
-## Ching
+## Cyans Themes for Typecho
 
 ### 简介
 
-Ching 是一款简洁的响应式Typecho主题。
+Cyans 是一款简洁的响应式Typecho主题。
 
-![Ching预览图](./screenshot.png)
+![Cyans预览图](./screenshot.png)
 
 ### 说明
 
@@ -17,7 +17,7 @@ Ching 是一款简洁的响应式Typecho主题。
 
 ##### 主题安装
 
-- 下载此分支文件重命名为`Ching`，上传至站点`/usr/themes/`，通过`控制台`->`外观`启用主题，在`设置外观`中做相关设置。
+- 下载此分支文件重命名为`Cyans`，上传至站点`/usr/themes/`，通过`控制台`->`外观`启用主题，在`设置外观`中做相关设置。
 
 ##### 插件安装
 
@@ -25,11 +25,11 @@ Ching 是一款简洁的响应式Typecho主题。
 
 ##### 评论系统安装
 
-- 主题默认使用Disqus评论系统，同时也提供Typecho原生评论系统，可在后台`设置外观`->`评论系统选择`中选择原生评论系统。
+- 主题默认使用Disqus评论系统，同时也提供Typecho原生评论系统，可在后台`控制台`->`外观`->`设置外观`->`评论系统选择`中选择原生评论系统。
 
 - 使用默认设置请注册[Disqus][1] 并创建自己的 Disqus Website Shortname。
 
-- 在后台`设置外观`->`Disqus评论系统设置`中按说明填写自己的Disqus Website Shortname，相关代码已经设置好**请勿随意修改**。
+- 在后台`控制台`->`外观`->`设置外观`->`Disqus评论系统设置`中按说明填写自己的`Disqus Website Shortname`，相关代码已经设置好**请勿随意修改**。
 
 ### 许可
 
