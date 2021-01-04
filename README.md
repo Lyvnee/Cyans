@@ -1,4 +1,4 @@
-## Cyans Themes for Typecho
+## Cyans Theme for Typecho
 
 ### 简介
 
@@ -27,9 +27,9 @@ Cyans 是一款简洁的响应式Typecho主题。
 
 - 主题默认使用Disqus评论系统，同时也提供Typecho原生评论系统，可在后台`控制台`->`外观`->`设置外观`->`评论系统选择`中选择原生评论系统。
 
-- 使用默认设置请注册[Disqus][1] 并创建自己的 Disqus Website Shortname。
+- 使用默认设置请注册[Disqus][1] 并创建自己的 `Disqus Website Shortname`。
 
-- 在后台`控制台`->`外观`->`设置外观`->`Disqus评论系统设置`中按说明填写自己的`Disqus Website Shortname`，相关代码已经设置好**请勿随意修改**。
+- 在后台`控制台`->`外观`->`设置外观`->`Disqus评论系统设置`中按说明填写自己的`Disqus Website Shortname`即可，`comments.php`中相关代码已经设置好**请勿随意修改**。
 
 ### 许可
 
