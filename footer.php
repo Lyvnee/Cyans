@@ -9,7 +9,7 @@
 </div>
 
 <script src="<?php $this->options->themeUrl('js/jquery.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('js/ching.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('js/cyans.js'); ?>"></script>
 
 <?php $this->footer(); ?>
 
