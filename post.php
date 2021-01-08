@@ -36,8 +36,12 @@
                 <div class="xinxi">
                 <span class="zuozhe">本文作者：</span><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a> &nbsp;&nbsp;&nbsp;&nbsp;
                 <span class="biaoti2">文章标题：</span> <a href="<?php $this->permalink() ?>"><?php $this->title() ?></a><br>
-                 <span class="blog_url">本文地址：</span><a href="<?php $this->permalink() ?>" title="<?php $this->title() ?>"><?php $this->permalink() ?></a><br>
-                <b>版权声明：</b>若无特别注明，本文皆为“<a class="blog_name" href="<?php $this->options->siteUrl(); ?>" title="<?php $this->options->description() ?>"><?php $this->options->title() ?></a>”原创，转载请保留文章出处。
+                <span class="blog_url">本文地址：</span><a href="<?php $this->permalink() ?>" title="<?php $this->title() ?>"><?php $this->permalink() ?></a><br>
+                <?php if ($this->fields->customLicenses): ?>
+                   <b>版权声明：</b><?php $this->fields->customLicenses(); ?>
+                <?php else: ?>
+                   <b>版权声明：</b><?php $this->options->addLicenses(); ?>
+                <?php endif; ?>
                 </div>
         </div>
         <ul class="post-more">
