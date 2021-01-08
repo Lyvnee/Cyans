@@ -26,10 +26,10 @@ function themeConfig($form) {
     $isExcerpt = new Typecho_Widget_Helper_Form_Element_Radio('isExcerpt',
         array('0' => _t('Typecho默认'),
               '1' => _t('文本截取')),
-              '1', _t('文章列表文章摘要内容'), _t('Typecho 默认方式根据&lt;!--more--&gt;标签截取内容，文本截取则仅截取设定长度的纯文本内容。'));
+              '1', _t('文章列表文章摘要内容'), _t('Typecho 默认方式根据&lt;!--more--&gt;标签截取内容，文本截取则仅截取设定长度的纯文本内容。自定义文章摘要不受文本截取长度限制！'));
     $form->addInput($isExcerpt);
 
-    $excerptLength = new Typecho_Widget_Helper_Form_Element_Text('excerptLength', NULL, '200', _t('文章摘要截取长度'), _t('仅在摘要内容选择文本截取时起作用。'));
+    $excerptLength = new Typecho_Widget_Helper_Form_Element_Text('excerptLength', NULL, '200', _t('文章摘要截取长度'), _t('仅在摘要内容选择文本截取和非自定义文章摘要时起作用。'));
     $form->addInput($excerptLength);
 
     $showDisqus = new Typecho_Widget_Helper_Form_Element_Radio('showDisqus',
@@ -82,9 +82,9 @@ function timer_stop( $display = 0, $precision = 3 ) {
     return $r;
 }
 
-/*
+
 function themeFields($layout) {
     $customAbstract = new Typecho_Widget_Helper_Form_Element_Textarea('customAbstract', NULL, NULL, _t('自定义文章摘要'), _t('在这里你可以自定义文章摘要,用来显示在首页。'));
     $layout->addItem($customAbstract);
 }
-*/
+
