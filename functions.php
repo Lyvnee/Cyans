@@ -44,6 +44,9 @@ function themeConfig($form) {
     $hidePages = new Typecho_Widget_Helper_Form_Element_Text('hidePages', NULL, NULL, _t('隐藏页面设置'), _t('在这里填入你要在导航栏隐藏的独立页面的页面缩略名{slug} ，例如about。目前只能填写一个！！！'));
     $form->addInput($hidePages);
     
+    $addLicenses = new Typecho_Widget_Helper_Form_Element_Textarea('addLicenses', NULL,_t('本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。'), _t('默认文章许可设置'), _t('在这里你可以设置文章的默认许可协议,用来显示在文章尾部。若需要临时使用其他协议，只需在撰写文章界面自定义字段处设置即可！'));
+    $form->addInput($addLicenses);
+    
     $topbarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('topbarBlock', 
     array('ShowAdmin' => _t('显示登录入口'),
           'ShowTopAd' => _t('显示顶栏公告')),
@@ -86,5 +89,8 @@ function timer_stop( $display = 0, $precision = 3 ) {
 function themeFields($layout) {
     $customAbstract = new Typecho_Widget_Helper_Form_Element_Textarea('customAbstract', NULL, NULL, _t('自定义文章摘要'), _t('在这里你可以自定义文章摘要,用来显示在首页。'));
     $layout->addItem($customAbstract);
+    
+    $customLicenses = new Typecho_Widget_Helper_Form_Element_Textarea('customLicenses', NULL,NULL, _t('自定义文章许可'), _t('在这里你可以自定义文章许可,用来显示在文章尾部。<br/>例如：本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。<br/>或者本作品转载于XX网站，作者XXX。'));
+    $layout->addItem($customLicenses);
 }
 
