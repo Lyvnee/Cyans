@@ -41,7 +41,7 @@ function themeConfig($form) {
     $shortName = new Typecho_Widget_Helper_Form_Element_Text('shortName', NULL, NULL, _t('Disqus评论系统设置'), _t('在这里填入你的Disqus Website Shortname，例如myblog。'));
     $form->addInput($shortName);
     
-    $hidePages = new Typecho_Widget_Helper_Form_Element_Text('hidePages', NULL, NULL, _t('隐藏页面设置'), _t('在这里填入你要在导航栏隐藏的独立页面的页面缩略名{slug} ，例如about。目前只能填写一个！！！'));
+    $hidePages = new Typecho_Widget_Helper_Form_Element_Text('hidePages', NULL, NULL, _t('导航栏隐藏独立页面设置'), _t('在这里填入你要在导航栏隐藏的独立页面的页面缩略名{slug} ，例如about。隐藏多个页面请使用英文逗号(,)分隔,例如about,links,guestbook'));
     $form->addInput($hidePages);
     
     $addLicenses = new Typecho_Widget_Helper_Form_Element_Textarea('addLicenses', NULL,_t('本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。'), _t('默认文章许可设置'), _t('在这里你可以设置文章的默认许可协议,用来显示在文章尾部。若需要临时使用其他协议，只需在撰写文章界面自定义字段处设置即可！'));
