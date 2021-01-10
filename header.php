@@ -14,6 +14,7 @@
         ), '', ' - '); ?><?php $this->options->title(); ?><?php if ($this->options->subSite): ?><?php $this->options->subSite(); ?><?php endif; ?>
     </title>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('prism/prism.css'); ?>">
     <?php $this->header(); ?>
     <?php if ($this->options->tongjiCode): ?><?php $this->options->tongjiCode(); ?><?php endif; ?>
 </head>

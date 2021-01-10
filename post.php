@@ -55,7 +55,7 @@
     </ul>
    
     <?php $this->need('comments.php'); ?>
-
+<script src="<?php $this->options->themeUrl('prism/prism.js'); ?>"></script>
 </div>
 
 <?php $this->need('sidebar.php'); ?>
