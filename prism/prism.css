@@ -10,7 +10,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
 	background: none;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono'， "Microsoft YaHei","Source Han Sans","Noto Sans CJK SC",monospace;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',"Microsoft YaHei","Source Han Sans","Noto Sans CJK SC",monospace;
 	font-size: 1em;
 	text-align: left;
 	white-space: pre;
