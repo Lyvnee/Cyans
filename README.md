@@ -95,6 +95,10 @@ Typecho 默认方式根据<!--more-->标签截取内容，文本截取则仅截�
 
 在这里填入你的Disqus Website Shortname，例如myblog。
 
+- 导航栏隐藏分类设置
+
+在这里填入你要在导航栏隐藏的分类的分类缩略名{slug} ，例如tech。隐藏多个分类请使用英文逗号(,)分隔,例如tech,life,dream
+
 - 导航栏隐藏独立页面设置
 
 在这里填入你要在导航栏隐藏的独立页面的页面缩略名{slug} ，例如about。隐藏多个页面请使用英文逗号(,)分隔,例如about,links,guestbook
