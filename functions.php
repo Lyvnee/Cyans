@@ -88,9 +88,11 @@ function timer_stop( $display = 0, $precision = 3 ) {
 
 function themeFields($layout) {
     $customAbstract = new Typecho_Widget_Helper_Form_Element_Textarea('customAbstract', NULL, NULL, _t('自定义文章摘要'), _t('在这里你可以自定义文章摘要,用来显示在首页。'));
+    $customAbstract->input->setAttribute('style', 'width:100%');
     $layout->addItem($customAbstract);
     
     $customLicenses = new Typecho_Widget_Helper_Form_Element_Textarea('customLicenses', NULL,NULL, _t('自定义文章许可'), _t('在这里你可以自定义文章许可,用来显示在文章尾部。<br/>例如：本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。<br/>或者本作品转载于XX网站，作者XXX。'));
+    $customLicenses->input->setAttribute('style', 'width:100%');
     $layout->addItem($customLicenses);
 }
 
