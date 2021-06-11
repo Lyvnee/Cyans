@@ -65,13 +65,15 @@
             <a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
             <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
             <?php while ($category->next()): ?>
+            <?php if (!in_array($category->slug, explode(',',$this->options->hideCategories))): ?>
             <a<?php if ($this->is('post')): ?><?php if ($this->category == $category->slug): ?> class="current"<?php endif; ?><?php else: ?><?php if ($this->is('category', $category->slug)): ?> class="current"<?php endif; ?><?php endif; ?> href="<?php $category->permalink(); ?>" title="<?php $category->name(); ?>"><?php $category->name(); ?></a>
+            <?php endif; ?>
             <?php endwhile; ?>
             <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
             <?php while($pages->next()): ?>
             	<?php if (!in_array($pages->slug, explode(',',$this->options->hidePages))): ?>
           		<a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
-		<?php endif; ?> 
+		    <?php endif; ?> 
             <?php endwhile; ?>
         </div>
 </div>
