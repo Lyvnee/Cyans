@@ -22,7 +22,7 @@ Cyans 是一款简洁的响应式Typecho主题。
 
 ##### 插件安装
 
-- 按照`plugins`分支中的说明，自行安装相关插件。
+- 下载 [typecho-plugin-store][4] 仓库中的 `Links` 插件，上传至站点`/usr/plugins/`，通过`控制台`->`插件`启用插件，在后台`管理->友情链接`添加友链。
 
 ##### 评论系统安装
 
@@ -130,3 +130,4 @@ MIT License
 [1]: https://disqus.com/
 [2]: http://www.imhan.com
 [3]: https://lyvnee.com/
+[4]: https://github.com/Lyvnee/typecho-plugin-store
