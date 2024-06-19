@@ -69,6 +69,18 @@ function themeConfig($form) {
     $form->addInput($sidebarBlock->multiMode());
 }
 
+
+function themeFields($layout) {
+    $customAbstract = new Typecho_Widget_Helper_Form_Element_Textarea('customAbstract', NULL, NULL, _t('自定义文章摘要'), _t('在这里你可以自定义文章摘要,用来显示在首页。'));
+    $customAbstract->input->setAttribute('style', 'width:100%');
+    $layout->addItem($customAbstract);
+    
+    $customLicenses = new Typecho_Widget_Helper_Form_Element_Textarea('customLicenses', NULL,NULL, _t('自定义文章许可'), _t('在这里你可以自定义文章许可,用来显示在文章尾部。<br/>例如：本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。<br/>或者本作品转载于XX网站，作者XXX。'));
+    $customLicenses->input->setAttribute('style', 'width:100%');
+    $layout->addItem($customLicenses);
+}
+
+
 function timer_start() {
     global $timestart;
     $mtime = explode( ' ', microtime() );
@@ -88,14 +100,30 @@ function timer_stop( $display = 0, $precision = 3 ) {
     return $r;
 }
 
-
-function themeFields($layout) {
-    $customAbstract = new Typecho_Widget_Helper_Form_Element_Textarea('customAbstract', NULL, NULL, _t('自定义文章摘要'), _t('在这里你可以自定义文章摘要,用来显示在首页。'));
-    $customAbstract->input->setAttribute('style', 'width:100%');
-    $layout->addItem($customAbstract);
-    
-    $customLicenses = new Typecho_Widget_Helper_Form_Element_Textarea('customLicenses', NULL,NULL, _t('自定义文章许可'), _t('在这里你可以自定义文章许可,用来显示在文章尾部。<br/>例如：本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。<br/>或者本作品转载于XX网站，作者XXX。'));
-    $customLicenses->input->setAttribute('style', 'width:100%');
-    $layout->addItem($customLicenses);
+function get_post_view($archive)
+{
+    $cid    = $archive->cid;
+    $db     = Typecho_Db::get();
+    $prefix = $db->getPrefix();
+    if (!array_key_exists('views', $db->fetchRow($db->select()->from('table.contents')->page(1,1)))) {
+        $db->query('ALTER TABLE `' . $prefix . 'contents` ADD `views` INT(10) DEFAULT 0;');
+        echo 0;
+        return;
+    }
+    $row = $db->fetchRow($db->select('views')->from('table.contents')->where('cid = ?', $cid));
+    if ($archive->is('single')) {
+ $views = Typecho_Cookie::get('extend_contents_views');
+        if(empty($views)){
+            $views = array();
+        }else{
+            $views = explode(',', $views);
+        }
+if(!in_array($cid,$views)){
+       $db->query($db->update('table.contents')->rows(array('views' => (int) $row['views'] + 1))->where('cid = ?', $cid));
+array_push($views, $cid);
+            $views = implode(',', $views);
+            Typecho_Cookie::set('extend_contents_views', $views); 
+        }
+    }
+    echo $row['views'];
 }
-

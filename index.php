@@ -4,7 +4,7 @@
  * 
  * @package Cyans Theme
  * @author Lyvnee
- * @version 0.9.9
+ * @version 1.0.0
  * @license MIT
  * @link https://lyvnee.com
  **/
@@ -35,7 +35,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 			<ul class="post-meta">
 				<li><span class="time"><?php $this->date('Y-m-j'); ?></span></li>
 				<li><span class="fl"><?php $this->category(','); ?></span></li>
-				<li><span class="view"><?php $this->views(); ?> 次浏览</span></li>
+				<li><span class="view"><?php get_post_view($this) ?> 次浏览</span></li>
 				<span class="pl f_r"><?php if ($this->options->showDisqus): ?><a href="<?php $this->permalink(); ?>#disqus_thread"  data-disqus-identifier="<?php $this->cid(); ?>"></a><?php else: ?><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('0 条评论', '1 条评论', '%d 条评论'); ?></a><?php endif; ?></span>
 			</ul>
             <div class="post-content">
